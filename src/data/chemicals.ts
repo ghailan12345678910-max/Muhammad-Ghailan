@@ -1,0 +1,331 @@
+import { ChemicalItem } from '../types';
+
+export const CHEMICAL_DATABASE: ChemicalItem[] = [
+  {
+    id: 'chem_nacl',
+    name: 'Natrium Klorida (NaCl)',
+    formula: 'NaCl',
+    mr: 58.44,
+    casNumber: '7647-14-5',
+    category: 'Garam',
+    physicalState: 'Kristal',
+    standardPurity: 99.5,
+    valency: 1,
+    ghsSymbols: [],
+    hazardStatements: ['Relatif tidak berbahaya pada pemakaian standar.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Higroskopis; simpan dalam botol tertutup rapat dan kering.',
+    referenceSource: 'Merck Index 15th Ed; Farmakope Indonesia Ed VI.'
+  },
+  {
+    id: 'chem_naoh',
+    name: 'Natrium Hidroksida (NaOH)',
+    formula: 'NaOH',
+    mr: 40.00,
+    casNumber: '1310-73-2',
+    category: 'Asam/Basa',
+    physicalState: 'Pelet',
+    standardPurity: 98.0,
+    valency: 1,
+    ghsSymbols: ['korosif', 'bahaya_kesehatan'],
+    hazardStatements: [
+      'H314: Menyebabkan luka bakar kulit yang parah dan kerusakan mata.',
+      'H290: Korosif terhadap logam.'
+    ],
+    storageCondition: 'Tempat Gelap/Kedap Udara',
+    compatibilityNotes: 'Sangat higroskopis dan menyerap CO2 dari udara; reaksi pelarutan sangat eksotermik (panas). Hindari wadah aluminium/kaca tanpa tutup plastik.',
+    referenceSource: 'PubChem CID 14798; NIOSH Pocket Guide.'
+  },
+  {
+    id: 'chem_hcl',
+    name: 'Asam Klorida Pekat (HCl 37%)',
+    formula: 'HCl',
+    mr: 36.46,
+    casNumber: '7647-01-0',
+    category: 'Asam/Basa',
+    physicalState: 'Cair',
+    standardPurity: 37.0,
+    density: 1.19, // g/mL
+    valency: 1,
+    ghsSymbols: ['korosif', 'toksik', 'iritan'],
+    hazardStatements: [
+      'H314: Menyebabkan luka bakar kulit parah.',
+      'H335: Dapat menyebabkan iritasi saluran pernapasan.',
+      'H290: Korosif pada logam.'
+    ],
+    storageCondition: 'Lemari Asam',
+    compatibilityNotes: 'Uap asam korosif kuat. Bekerja selalu di lemari asam (fume hood). Tuangkan asam ke dalam air, jangan sebaliknya!',
+    referenceSource: 'Merck Chemical Safety; ISO 6353/2.'
+  },
+  {
+    id: 'chem_h2so4',
+    name: 'Asam Sulfat Pekat (H2SO4 98%)',
+    formula: 'H2SO4',
+    mr: 98.08,
+    casNumber: '7664-93-9',
+    category: 'Asam/Basa',
+    physicalState: 'Cair',
+    standardPurity: 98.0,
+    density: 1.84, // g/mL
+    valency: 2,
+    ghsSymbols: ['korosif', 'bahaya_kesehatan'],
+    hazardStatements: [
+      'H314: Menyebabkan luka bakar parah pada kulit dan mata.',
+      'H290: Korosif terhadap logam.'
+    ],
+    storageCondition: 'Lemari Asam',
+    compatibilityNotes: 'Eksotermik ekstrem saat kontak dengan air. BAHAYA FATAL jika menuang air ke asam pekat! Gunakan sarung tangan nitril tebal.',
+    referenceSource: 'CRC Handbook of Chemistry and Physics; NIOSH.'
+  },
+  {
+    id: 'chem_etanol',
+    name: 'Etanol 96% (Alkohol)',
+    formula: 'C2H5OH',
+    mr: 46.07,
+    casNumber: '64-17-5',
+    category: 'Lainnya',
+    physicalState: 'Cair',
+    standardPurity: 96.0,
+    density: 0.805,
+    valency: 1,
+    ghsSymbols: ['mudah_terbakar', 'iritan'],
+    hazardStatements: [
+      'H225: Cairan dan uap amat mudah menyala.',
+      'H319: Menyebabkan iritasi mata berat.'
+    ],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Jauhkan dari percikan api, api terbuka, dan sinar matahari langsung. Simpan dalam wadah bertutup rapat.',
+    referenceSource: 'Farmakope Indonesia Ed VI; European Pharmacopoeia.'
+  },
+  {
+    id: 'chem_kmno4',
+    name: 'Kalium Permanganat (KMnO4)',
+    formula: 'KMnO4',
+    mr: 158.03,
+    casNumber: '7722-64-7',
+    category: 'Indikator',
+    physicalState: 'Kristal',
+    standardPurity: 99.0,
+    valency: 5, // dalam suasana asam (Mn7+ -> Mn2+)
+    ghsSymbols: ['oksidator', 'toksik', 'bahaya_lingkungan'],
+    hazardStatements: [
+      'H272: Dapat memperhebat api; oksidator kuat.',
+      'H302: Berbahaya jika tertelan.',
+      'H410: Sangat toksik bagi kehidupan perairan.'
+    ],
+    storageCondition: 'Tempat Gelap/Kedap Udara',
+    compatibilityNotes: 'Hindari kontak dengan bahan organik pereduksi, gliserol, atau asam kuat terkonsentrasi karena dapat meledak. Simpan dalam botol cokelat.',
+    referenceSource: 'Vogel Quantitative Chemical Analysis 6th Ed.'
+  },
+  {
+    id: 'chem_asam_oksalat',
+    name: 'Asam Oksalat Dihidrat (H2C2O4.2H2O)',
+    formula: 'C2H2O4·2H2O',
+    mr: 126.07,
+    casNumber: '6153-56-6',
+    category: 'Asam/Basa',
+    physicalState: 'Kristal',
+    standardPurity: 99.5,
+    valency: 2,
+    ghsSymbols: ['toksik', 'iritan'],
+    hazardStatements: [
+      'H302 + H312: Berbahaya jika tertelan atau terkena kulit.',
+      'H318: Menyebabkan kerusakan mata serius.'
+    ],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Zat standar primer untuk standarisasi larutan basa (NaOH) dan kalium permanganat.',
+    referenceSource: 'Merck Chemical Standards Index.'
+  },
+  {
+    id: 'chem_na2s2o3',
+    name: 'Natrium Tiosulfat Pentahidrat (Na2S2O3.5H2O)',
+    formula: 'Na2S2O3·5H2O',
+    mr: 248.18,
+    casNumber: '10102-17-7',
+    category: 'Garam',
+    physicalState: 'Kristal',
+    standardPurity: 99.0,
+    valency: 1,
+    ghsSymbols: [],
+    hazardStatements: ['Tidak beracun pada konsentrasi standar laboratorium.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Peka terhadap dekomposisi oleh bakteri dan CO2 di air; sering distabilkan dengan sedikit Na2CO3 saat pembuatan larutan standar.',
+    referenceSource: 'Vogel Textbook of Macro and Semimicro Qualitative Inorganic Analysis.'
+  },
+  {
+    id: 'chem_agno3',
+    name: 'Perak Nitrat (AgNO3)',
+    formula: 'AgNO3',
+    mr: 169.87,
+    casNumber: '7761-88-8',
+    category: 'Garam',
+    physicalState: 'Kristal',
+    standardPurity: 99.8,
+    valency: 1,
+    ghsSymbols: ['korosif', 'oksidator', 'bahaya_lingkungan'],
+    hazardStatements: [
+      'H272: Dapat memperhebat api; oksidator.',
+      'H314: Menyebabkan luka bakar parah; meninggalkan noda hitam pada kulit.',
+      'H410: Sangat toksik bagi biota air.'
+    ],
+    storageCondition: 'Tempat Gelap/Kedap Udara',
+    compatibilityNotes: 'Peka terhadap cahaya; segera menghitam jika terpapar sinar UV. Simpan dalam botol kaca cokelat gelap.',
+    referenceSource: 'ASTM Reagent Standards.'
+  },
+  {
+    id: 'chem_edta',
+    name: 'Dinatrium EDTA Dihidrat (Na2EDTA.2H2O)',
+    formula: 'C10H14N2Na2O8·2H2O',
+    mr: 372.24,
+    casNumber: '6381-92-6',
+    category: 'Reagen Klinis',
+    physicalState: 'Serbuk',
+    standardPurity: 99.0,
+    valency: 2,
+    ghsSymbols: ['iritan'],
+    hazardStatements: ['H332: Berbahaya jika terhirup.', 'H373: Menyebabkan kerusakan organ saat paparan berulang.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Agen pengkelat kalsium kuat; antikoagulan standar pemeriksaan darah hematologi lengkap (CBC).',
+    referenceSource: 'ICSH (International Council for Standardization in Haematology).'
+  },
+  {
+    id: 'chem_turk',
+    name: 'Larutan Turk (Reagen Hitung Leukosit)',
+    formula: 'Gentian Violet + Asam Asetat Glasial + Aquades',
+    mr: 60.05, // basis CH3COOH
+    casNumber: 'Campuran Lab',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['iritan'],
+    hazardStatements: ['H315: Mengiritasi kulit dan mata ringan karena kandungan asam asetat.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Komposisi standar: 1 mL Gentian Violet 1% + 1 mL Asam Asetat Glasial + 98 mL Aquades. Berfungsi melisiskan eritrosit dan mewarnai inti leukosit.',
+    referenceSource: 'Buku Pedoman Praktikum Hematologi TLM Kemenkes RI.'
+  },
+  {
+    id: 'chem_hayem',
+    name: 'Larutan Hayem (Reagen Hitung Eritrosit)',
+    formula: 'HgCl2 + Na2SO4 + NaCl + Aquades',
+    mr: 271.5, // basis HgCl2
+    casNumber: 'Campuran Lab',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['toksik', 'bahaya_lingkungan'],
+    hazardStatements: ['H300: Fatal jika tertelan karena mengandung merkuri klorida.', 'H411: Toksik untuk lingkungan akuatik.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Larutan isotonis yang mencegah aglutinasi eritrosit. Tangani limbah sebagai limbah B3 Merkuri.',
+    referenceSource: 'Kemenkes RI Standar Laboratorium Hematologi.'
+  },
+  {
+    id: 'chem_drabkin',
+    name: 'Larutan Drabkin (Kadar Hb Cyanmethemoglobin)',
+    formula: 'K3Fe(CN)6 + KCN + KH2PO4 + Aquades',
+    mr: 329.2,
+    casNumber: 'Campuran Lab',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['toksik'],
+    hazardStatements: ['H301: Beracun jika tertelan karena mengandung ion sianida.'],
+    storageCondition: 'Tempat Gelap/Kedap Udara',
+    compatibilityNotes: 'Peka cahaya (simpan di botol coklat). Jangan campurkan dengan asam kuat karena membebaskan gas asam sianida beracun (HCN). pH larutan harus 7.0 - 7.4.',
+    referenceSource: 'WHO Guidelines on Standard Haemoglobinometry.'
+  },
+  {
+    id: 'chem_giemsa',
+    name: 'Pewarna Giemsa (Stock Solution)',
+    formula: 'Azure II Eosin + Azure II + Gliserol + Metanol',
+    mr: 350.0,
+    casNumber: '51811-82-6',
+    category: 'Pewarna/Staining',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['mudah_terbakar', 'toksik'],
+    hazardStatements: ['H225: Cairan mudah menyala (pelarut metanol).', 'H331: Toksik jika terhirup.'],
+    storageCondition: 'Tempat Gelap/Kedap Udara',
+    compatibilityNotes: 'Pengenceran kerja (working solution) harus dibuat segar menggunakan buffer fosfat pH 6.8 - 7.2 sebelum pewarnaan apusan darah.',
+    referenceSource: 'Dacie and Lewis Practical Haematology 12th Ed.'
+  },
+  {
+    id: 'chem_formalin',
+    name: 'Formalin 10% Neutral Buffered (NBF)',
+    formula: 'CH2O (Formaldehid) ~4% dalam PBS',
+    mr: 30.03,
+    casNumber: '50-00-0',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 10.0,
+    ghsSymbols: ['toksik', 'bahaya_kesehatan', 'korosif'],
+    hazardStatements: [
+      'H350: Dapat menyebabkan kanker (karsinogen).',
+      'H317: Dapat menyebabkan reaksi alergi kulit.',
+      'H330: Fatal jika terhirup.'
+    ],
+    storageCondition: 'Lemari Asam',
+    compatibilityNotes: 'Fiksatif jaringan histopatologi standar emas. Gunakan masker respirator khusus formaldehid dan sarung tangan nitril. Hindari pembuangan langsung ke saluran air umum.',
+    referenceSource: 'Bancroft Theory and Practice of Histological Techniques.'
+  },
+  {
+    id: 'chem_benedict',
+    name: 'Reagen Benedict (Kualitatif Glukosa)',
+    formula: 'CuSO4·5H2O + Na2CO3 + Natrium Sitrat',
+    mr: 249.68,
+    casNumber: 'Campuran Lab',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['iritan'],
+    hazardStatements: ['H319: Menyebabkan iritasi mata yang serius.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Stabil pada suhu kamar. Dipanaskan bersama sampel urin untuk reduksi Cu2+ biru menjadi Cu2O endapan merah bata.',
+    referenceSource: 'Henry Clinical Diagnosis and Management by Laboratory Methods.'
+  },
+  {
+    id: 'chem_biuret',
+    name: 'Reagen Biuret (Protein Total)',
+    formula: 'CuSO4 + KNaC4H4O6·4H2O + KI + NaOH',
+    mr: 282.22,
+    casNumber: 'Campuran Lab',
+    category: 'Reagen Klinis',
+    physicalState: 'Cair',
+    standardPurity: 100,
+    ghsSymbols: ['korosif'],
+    hazardStatements: ['H314: Mengandung basa kuat NaOH yang dapat mengiritasi kulit.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Bereaksi dengan ikatan peptida protein membentuk kompleks warna ungu terkoordinasi Cu2+.',
+    referenceSource: 'Tietz Textbook of Clinical Chemistry and Molecular Diagnostics.'
+  },
+  {
+    id: 'chem_glukosa',
+    name: 'D-Glukosa Anhidrat (Standar)',
+    formula: 'C6H12O6',
+    mr: 180.16,
+    casNumber: '50-99-7',
+    category: 'Garam',
+    physicalState: 'Serbuk',
+    standardPurity: 99.8,
+    valency: 1,
+    ghsSymbols: [],
+    hazardStatements: ['Non-toksik.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Keringkan pada desikator sebelum penimbangan untuk akurasi larutan standar kalibrator.',
+    referenceSource: 'NIST Standard Reference Material.'
+  },
+  {
+    id: 'chem_pbs',
+    name: 'Phosphate Buffered Saline (PBS) pH 7.4',
+    formula: 'NaCl + KCl + Na2HPO4 + KH2PO4',
+    mr: 141.96, // basis Na2HPO4
+    casNumber: 'Campuran Buffer',
+    category: 'Buffer',
+    physicalState: 'Serbuk',
+    standardPurity: 100,
+    ghsSymbols: [],
+    hazardStatements: ['Aman.'],
+    storageCondition: 'Suhu Kamar (15-25°C)',
+    compatibilityNotes: 'Mempertahankan tekanan osmotik dan pH fisiologis sel darah dan suspensi bakteri.',
+    referenceSource: 'Cold Spring Harbor Protocols.'
+  }
+];

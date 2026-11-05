@@ -1,0 +1,8 @@
+{
+  "name": "ReagenLab",
+  "description": "Smart Reagent Calculator & Laboratory Management System untuk mahasiswa Teknologi Laboratorium Medik (TLM) dan analis laboratorium.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

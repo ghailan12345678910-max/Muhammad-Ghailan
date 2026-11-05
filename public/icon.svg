@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="flaskGrad" x1="150" y1="120" x2="360" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="liquid" x1="140" y1="280" x2="370" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="128" fill="url(#bg)"/>
+  
+  <!-- Outer Glow Ring -->
+  <circle cx="256" cy="256" r="210" stroke="#06b6d4" stroke-width="4" stroke-opacity="0.3" stroke-dasharray="12 8"/>
+  <circle cx="256" cy="256" r="190" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.2"/>
+
+  <!-- Flask Body -->
+  <path d="M226 110 H286 V190 L370 340 C388 372 365 412 328 412 H184 C147 412 124 372 142 340 L226 190 Z" 
+        fill="none" 
+        stroke="url(#flaskGrad)" 
+        stroke-width="22" 
+        stroke-linejoin="round" 
+        stroke-linecap="round"/>
+        
+  <!-- Lip of Flask -->
+  <rect x="212" y="98" width="88" height="18" rx="9" fill="#38bdf8"/>
+
+  <!-- Liquid inside -->
+  <path d="M174 340 C210 325 240 350 280 330 C310 315 325 325 348 340 L362 365 C372 382 360 400 340 400 H172 C152 400 140 382 150 365 Z" 
+        fill="url(#liquid)" 
+        opacity="0.85"/>
+        
+  <!-- Bubbles inside liquid -->
+  <circle cx="220" cy="360" r="12" fill="#e0f2fe" opacity="0.8"/>
+  <circle cx="270" cy="375" r="8" fill="#e0f2fe" opacity="0.6"/>
+  <circle cx="295" cy="345" r="6" fill="#e0f2fe" opacity="0.7"/>
+  <circle cx="240" cy="320" r="7" fill="#e0f2fe" opacity="0.5"/>
+
+  <!-- Graduation marks -->
+  <line x1="228" y1="280" x2="252" y2="280" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="214" y1="315" x2="242" y2="315" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+  <line x1="200" y1="350" x2="232" y2="350" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity="0.6"/>
+
+  <!-- Science Atom Orbit Accent -->
+  <ellipse cx="256" cy="275" rx="140" ry="50" transform="rotate(-30 256 275)" fill="none" stroke="#38bdf8" stroke-width="4" opacity="0.4" stroke-dasharray="10 10"/>
+  <circle cx="360" cy="215" r="7" fill="#38bdf8"/>
+</svg>
